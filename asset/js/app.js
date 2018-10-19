@@ -38,9 +38,13 @@ formulario.addEventListener("submit", (evt) => {
         descripcion: formulario[2].value,
         cantidad: formulario[3].value
     }
+    if(formulario[1].value === "" || formulario[2].value  === "" || formulario[3].value === ""){
+        alert("Campos vacios, debe llenar todo");
+    }else{
     bitacoras.push(bitacora);
     cont++;
     mostrar();
+    }
 });
 
 const crearElemento = (bitacora, tbody) => {
